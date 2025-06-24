@@ -1,0 +1,23 @@
+.info-contact {
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 3rem;
+
+	& div {
+		font-family: var(--font-subtitle);
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+
+		& svg {
+			color: var(--primary-color);
+		}
+	}
+
+	@media (max-width: 680px) {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+}

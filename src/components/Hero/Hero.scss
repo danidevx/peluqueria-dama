@@ -1,0 +1,81 @@
+.hero {
+	position: relative;
+	background-size: cover;
+	background-image: url('/images/hero.webp');
+	background-position: center;
+	min-height: 100svh;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	&::before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: var(--overlay-color-primary);
+	}
+
+	.hero-content {
+		line-height: 1.2;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1em;
+		margin-left: 15em;
+		margin-top: 10em;
+		color: var(--white);
+		z-index: 10;
+		text-shadow: var(--text-shadow);
+
+		& h1 {
+			font-family: var(--font-title);
+			font-size: 7em;
+			font-weight: 400;
+		}
+
+		& h3 {
+			font-family: var(--font-subtitle);
+			font-size: 2em;
+			font-weight: 500;
+		}
+	}
+
+	.hero-horarios {
+		position: absolute;
+		right: 1.5rem;
+		top: auto;
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		font-size: 1.2rem;
+	}
+
+	@media (max-width: 680px) {
+		.hero-content {
+			margin: 0;
+			align-items: center;
+
+			& h1 {
+				font-size: 4rem;
+			}
+
+			& h3 {
+				font-size: 1.5rem;
+				text-align: center;
+			}
+		}
+
+		.hero-horarios {
+			color: var(--white);
+			right: auto;
+			bottom: 0;
+			text-shadow: var(--text-shadow);
+			text-align: center;
+			writing-mode: unset;
+			-webkit-writing-mode: unset;
+			-ms-writing-mode: unset;
+			text-orientation: unset;
+			-webkit-text-orientation: unset;
+		}
+	}
+}
